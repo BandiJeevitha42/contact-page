@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clockwise Circular Input Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 to-purple-800 dark:from-black dark:to-gray-900 flex items-center justify-center transition duration-500">
+
+  <!-- 🌗 Theme Toggle -->
+  <button onclick="document.documentElement.classList.toggle('dark')"
+    class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white dark:bg-yellow-400 shadow-xl text-lg font-bold hover:rotate-12 transition">🌙</button>
+
+  <!-- 🍩 Donut Face with Inputs Around -->
+  <div class="relative w-[400px] h-[400px] rounded-full bg-yellow-100 dark:bg-yellow-300 shadow-2xl ring-8 ring-offset-4 ring-offset-white dark:ring-offset-gray-900 ring-gradient-to-r from-pink-500 via-yellow-400 to-purple-600 animate-pulse">
+
+    <!-- 🟡 Central Flip Button -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group w-28 h-12">
+      <button
+        class="absolute inset-0 bg-purple-400 dark:bg-green-400 text-black font-bold rounded-full transform transition duration-700 group-hover:rotate-y-180 flex items-center justify-center">
+        📩 Send
+      </button>
+      <div
+        class="absolute inset-0 bg-green-400 dark:bg-purple-600 text-black font-bold rounded-full transform rotate-y-180 group-hover:rotate-y-0 transition duration-700 flex items-center justify-center">
+        ✅ Sent!
+      </div>
+    </div>
+
+    <!-- 😄 Emoji Face -->
+    <div class="absolute top-14 left-24 w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
+    <div class="absolute top-14 right-24 w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-24 h-3 border-b-4 border-black dark:border-white rounded-full"></div>
+
+    <!-- 🕒 Clockwise Circular Inputs -->
+    <!-- 12 o'clock -->
+    <div class="absolute top-2 left-1/2 -translate-x-1/2">
+      <input type="text" placeholder="👤"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 2 o'clock -->
+    <div class="absolute top-8 right-8">
+      <input type="email" placeholder="📧"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 3 o'clock -->
+    <div class="absolute top-1/2 right-0 -translate-y-1/2">
+      <input type="password" placeholder="🔒"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 5 o'clock -->
+    <div class="absolute bottom-8 right-8">
+      <input type="password" placeholder="🔁"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 6 o'clock -->
+    <div class="absolute bottom-2 left-1/2 -translate-x-1/2">
+      <input type="text" placeholder="💬"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 7 o'clock -->
+    <div class="absolute bottom-8 left-8">
+      <input type="text" placeholder="📱"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 9 o'clock -->
+    <div class="absolute top-1/2 left-0 -translate-y-1/2">
+      <input type="text" placeholder="🌐"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+
+    <!-- 10 o'clock -->
+    <div class="absolute top-8 left-8">
+      <input type="text" placeholder="🎓"
+        class="w-14 h-14 rounded-full text-center bg-white dark:bg-gray-100 text-xl shadow focus:outline-none" />
+    </div>
+  </div>
+</body>
+</html>

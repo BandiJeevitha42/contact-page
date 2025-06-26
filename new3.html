@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creative Rainbow Donut Contact Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 to-purple-800 dark:from-black dark:to-gray-800 flex items-center justify-center transition-all duration-500">
+
+  <!-- 🌙 Moon Toggle with Stars -->
+  <div class="absolute top-6 right-6 flex items-center space-x-2">
+    <span class="w-2 h-2 bg-white rounded-full animate-ping"></span>
+    <span class="w-1.5 h-1.5 bg-yellow-200 rounded-full animate-pulse"></span>
+    <span class="w-1 h-1 bg-white rounded-full animate-bounce"></span>
+    <button onclick="document.documentElement.classList.toggle('dark')"
+      class="w-10 h-10 bg-yellow-400 dark:bg-white rounded-full shadow-md text-center text-xl font-bold hover:rotate-12 transition">
+      🌙
+    </button>
+  </div>
+
+  <!-- 🍩 Donut Emoji Contact Form -->
+  <div class="relative w-96 h-[460px] rounded-full bg-white dark:bg-yellow-300 shadow-2xl p-5 flex flex-col items-center justify-center transition hover:scale-105 duration-500 ring-8 ring-offset-4 ring-offset-white dark:ring-offset-gray-900 ring-gradient-to-r from-pink-500 via-yellow-400 to-purple-600 animate-pulse">
+
+    <!-- Eyes -->
+    <div class="absolute top-14 left-20 w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
+    <div class="absolute top-14 right-20 w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
+
+    <!-- Smile -->
+    <div class="absolute bottom-8 w-28 h-4 border-b-4 border-black dark:border-white rounded-full"></div>
+
+    <!-- ✍️ Form Inputs -->
+    <form class="w-64 space-y-3 z-10 mt-16">
+      <input type="text" placeholder="Name"
+        class="w-full p-2 rounded-full text-center bg-white dark:bg-gray-100 shadow focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      <input type="email" placeholder="Email"
+        class="w-full p-2 rounded-full text-center bg-white dark:bg-gray-100 shadow focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      <input type="password" placeholder="Password"
+        class="w-full p-2 rounded-full text-center bg-white dark:bg-gray-100 shadow focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      <input type="password" placeholder="Re-enter Password"
+        class="w-full p-2 rounded-full text-center bg-white dark:bg-gray-100 shadow focus:outline-none focus:ring-2 focus:ring-purple-500" />
+
+      <!-- Flip Submit Button -->
+      <div class="group relative w-full h-12">
+        <!-- Front -->
+        <button type="submit"
+          class="absolute inset-0 bg-purple-400 dark:bg-green-400 text-black font-bold rounded-full transform transition duration-700 group-hover:rotate-y-180 backface-hidden flex items-center justify-center">
+          📩 Create
+        </button>
+        <!-- Back -->
+        <div
+          class="absolute inset-0 bg-green-400 dark:bg-purple-600 text-black font-bold rounded-full transform rotate-y-180 group-hover:rotate-y-0 transition duration-700 flex items-center justify-center backface-hidden">
+          🎉 Success!
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
